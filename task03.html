@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="shortcut icon" href="tic.ico" type="image/x-icon">
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      font-family: 'Sitka Small Semibold', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width:100vw;
+      margin: 0;
+      background: rgb(63,225,115);
+      background: linear-gradient(0deg, rgba(63,225,115,1) 0%, rgba(80,218,189,1) 100%);
+      background-size: cover;
+    }
+
+    #title {
+      text-align: center;
+      font-size:25px;
+      margin-bottom: 15px;
+      font-family: 'Sitka Small Semibold';
+    }
+
+    #gameContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      gap: 2px;
+    }
+
+    .cell {
+      width: 100px;
+      height: 100px;
+      border: 2px solid #faf8f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow:1px 1px 10px rgb(227, 220, 226);
+    }
+
+    .cell:hover {
+      background-color: rgb(158, 225, 193);
+      transform:scale(1.1);
+    }
+
+    #message {
+      text-align: center;
+      font-size: 30px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      color: black;
+      font-family: 'Sitka Small Semibold', sans-serif;
+      font-weight: bolder;
+    }
+
+    #mode {
+      font-size: 25px;
+      padding: 10px;
+      background-color:transparent;
+      border: 2px solid #faf8f9;
+      box-shadow:1px 1px 10px rgb(227, 220, 226);
+      border-radius: 5px;
+
+    }
+    #mode:hover{
+      background-color:rgb(158, 225, 193);
+      transform:scale(1.1);
+    }
+  </style>
+  
+</head>
+<body>
+  <div id="title">
+    <h1>Tic Tac Toe</h1>
+  </div>
+  <div id="gameContainer">
+    <div id="board"></div>
+    <div id="message">Your turn! (Play with AI)</div>
+    <button id="mode">Change Mode</button>
+  </div>
+
+ 
+</body>
+</html>
